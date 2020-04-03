@@ -29,7 +29,10 @@ jobs:
         - ./node_modules
     - run:
         name: test
-        command: npm test
+        # run tests with coverage
+        command: npm run cover
+    - store_artifacts:
+        path: coverage
 
 workflows:
   version: 2
